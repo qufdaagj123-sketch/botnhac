@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord Music Bot - Vercel Panel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f1115] text-white min-h-screen p-6">
+<div class="max-w-4xl mx-auto">
+  <h1 class="text-3xl font-black mb-2"><span class="text-[#5865F2]">MUSIC</span> BOT - VERCEL VERSION</h1>
+  <div class="bg-yellow-900/30 border border-yellow-600/50 rounded-xl p-4 mb-6">
+    <p class="font-bold text-yellow-400">⚠️ Lưu ý quan trọng khi up lên Vercel:</p>
+    <p class="text-sm mt-2 text-yellow-200">Vercel chỉ host được GIAO DIỆN WEB này thôi. Bot nhạc Discord cần chạy liên tục (pip + ffmpeg + kết nối voice) nên Vercel sẽ tự tắt sau 10 giây và không phát được nhạc.</p>
+    <p class="text-sm mt-2">Để bot chạy 24/7 bạn phải host file <code>bot.py</code> trên <b>Render.com</b> hoặc <b>Railway.app</b> (free) - Mình đã để sẵn file bot.py và hướng dẫn trong README.md</p>
+  </div>
+
+  <div class="bg-[#1a1d24] border border-zinc-800 rounded-2xl p-5 mb-6">
+    <h2 class="font-bold mb-3">🔑 Token Bot (Demo giao diện)</h2>
+    <input id="token" type="password" placeholder="Dán token để test giao diện" class="w-full p-3 bg-black border border-zinc-700 rounded-xl mb-3">
+    <button onclick="alert('Đây là bản Vercel demo giao diện thôi. Để chạy bot thật, tải bản Full ở dưới và host trên Render nhé!')" class="bg-[#5865F2] px-6 py-3 rounded-xl font-bold">Connect (Demo)</button>
+    <p class="text-xs text-zinc-500 mt-3">Sau khi deploy lên Vercel, trang này sẽ hiện online nhưng bot.py sẽ không chạy được trên Vercel.</p>
+  </div>
+
+  <div class="bg-[#1a1d24] border border-zinc-800 rounded-2xl p-5">
+    <h2 class="font-bold mb-3">🚀 Cách up lên Vercel đúng</h2>
+    <ol class="list-decimal ml-5 text-sm space-y-2 text-zinc-300">
+      <li>Vào vercel.com -> Add New Project -> Import Git Repository (up code này lên GitHub trước)</li>
+      <li>Framework Preset: Other</li>
+      <li>Build Command: để trống</li>
+      <li>Deploy -> xong, bạn sẽ có link https://ten-project.vercel.app</li>
+      <li>Nhưng đây chỉ là web. Để chạy bot thật, đọc phần dưới</li>
+    </ol>
+    <div class="mt-4 bg-black p-3 rounded-xl">
+      <p class="text-xs font-bold text-green-400">✅ HOST BOT THẬT 24/7 (KHUYÊN DÙNG):</p>
+      <p class="text-xs mt-1">1. Giữ lại file bot.py trong zip này</p>
+      <p class="text-xs">2. Vào render.com -> New -> Background Worker -> chọn repo này</p>
+      <p class="text-xs">3. Start Command: python bot.py</p>
+      <p class="text-xs">4. Add Env: DISCORD_TOKEN=token của bạn</p>
+      <p class="text-xs">5. Deploy -> bot sẽ online 24/7</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
